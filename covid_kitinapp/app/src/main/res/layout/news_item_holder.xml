@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Made With Love
+  ~ Author @Moh Husni Mubaraq
+  ~ Not for Commercial Purpose
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#8BC34A"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/newsCardView"
+        style="@style/AppTheme.styleMarginAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/cardRadius"
+        app:cardElevation="@dimen/cardElevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/marginVertiCard"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/imageNews"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_news" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/imageNews"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="TITLE" />
+
+                <TextView
+                    android:id="@+id/tvSourceNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    tools:text="Source" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
